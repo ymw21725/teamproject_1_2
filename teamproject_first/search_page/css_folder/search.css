@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.headerBigNav {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+
+    width: 100%;
+    height: 150px;
+    padding: 0 5%;
+
+    z-index: 2;
+}
+
+.headerBigNav:hover {
+    background-color: white;
+}
+
+.headerBigNav:hover .mainBtnLi>a {
+    color: black;
+}
+
+.menuWrap.left {
+    display: flex;
+    flex: 2;
+}
+
+.logo {
+    flex: 1;
+}
+
+.menuWrap.right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 2;
+}
+
+header h1 {
+    height: 100%;
+    background: url(../../image_folder/logo_basic.png) center / 100%;
+
+    min-width: 250px;
+}
+
+/* === */
+
+.mainBtnLi {
+    display: flex;
+    height: 100%;
+
+    align-items: center;
+}
+
+.mainBtnLi>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.2rem;
+    color: white;
+}
+
+.mainBtnLi>a:hover {
+    opacity: .5;
+}
+
+.iconBtn {
+    width: 50px;
+    height: 50px;
+}
+
+.non_iconBtn {
+    width: 130px;
+    height: 50px;
+
+    min-width: 80px;
+}
+
+.leftMainUl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+}
+
+.leftMainLi:nth-of-type(n+3) {
+    margin-left: 20px;
+}
+
+.leftMainLi:first-of-type {
+    margin-right: 10px;
+}
+
+.rightMainUl {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+}
+
+.rightMainLi:first-of-type {
+    margin-right: 30px;
+}
+
+.rightMainLi:nth-of-type(n+3) {
+    margin-left: 20px;
+}
+
+/* 
+=========
+*/
+
+.leftMainUl>li>ul {
+    display: grid;
+    visibility: hidden;
+    position: absolute;
+
+    grid-template: .3fr 1fr .3fr 1fr .3fr 1fr .3fr 1fr .3fr 1fr .3fr/ 1fr .3fr 3fr .3fr;
+
+    left: -100%;
+    top: 150px;
+    width: 800px;
+    height: calc(100vh - 150px);
+
+    border: 1px solid;
+    background-color: white;
+}
+
+.leftMainUl>li:nth-child(3) {
+    cursor:default;
+}
+
+.leftMainUl>li:nth-child(3):hover>ul {
+    cursor:default;
+    visibility: initial;
+    left: 0;
+
+    transition: left .5s;
+    /* -webkit-transition: left .5s;
+    -moz-transition: left .5s;     
+    -ms-transition: left .5s;
+    -o-transition: left .5s; */
+}
+
+.hoverLi {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hoverLi a {
+    color: black;
+}
+
+.hoverLi.num1 {
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.hoverLi.num1 a:hover,
+.hoverLi.num2 a:hover,
+.hoverLi.num3 a:hover,
+.hoverLi.num4 a:hover,
+.hoverLi.num5 a:hover{
+    background-color: gray;
+}
+
+.hoverLi.num1~li:last-of-type>div {
+    background: url(../image_folder/background_watch_brown.jpeg) center / 100%;
+}
+
+.hoverLi.num1:hover~li:last-of-type>div {
+    background: url(../image_folder/background_watch_brown.jpeg) center / 100%;
+}
+
+/* ===== */
+
+.hoverLi.num2 {
+    grid-area: 4 / 1 / span 1 / span 1;
+}
+
+.hoverLi.num2:hover~li:last-of-type>div {
+    background:url(../../image_folder/material_steel.webp) center/ 100%;
+}
+
+/* ===== */
+
+.hoverLi.num3 {
+    grid-area: 6 / 1 / span 1 / span 1;
+}
+
+.hoverLi.num3:hover~li:last-of-type>div {
+    background-color: violet;
+}
+
+/* ===== */
+
+.hoverLi.num4 {
+    grid-area: 8 / 1 / span 1 / span 1;
+}
+
+
+.hoverLi.num4:hover~li:last-of-type>div {
+    background-color: tomato;
+}
+
+/* ===== */
+
+.hoverLi.num5 {
+    grid-area: 10 / 1 / span 1 / span 1;
+}
+
+.hoverLi.num5:hover~li:last-of-type>div {
+    background-color:springgreen;
+}
+
+/* ===== */
+
+.hoverLi.num6 {
+    grid-area: 2 / 3 / -2 / span 1;
+}
+
+.hover_a, .hover_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid;
+}
+
+.hover_a, .hover_div {
+    width: 100%;
+    height: 100%;
+}
+
+.hover_a.hoverMenu {
+    width: 80%;
+}
+
+/* 
+===================================================== header^
+*/
+
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.masterpiece_topBanner {
+    height: 30vw;
+
+    background-color: blue;
+}
+
+.Banner_img {
+    height: 60%;
+
+    background: url(../image_folder/main_banner.jpeg) 0 / 100%;
+}
+
+h2 {
+    height: 25%;
+
+    background-color: violet;
+}
+
+.sorting_nav {
+    height: 15%;
+
+    background-color: tomato;
+}
+
+/* 
+==========
+*/
+
+.materpeice_titlePlusItemList {
+    height: 150vh;
+    /* margin-top: 10%; */
+}
+
+.itemsAllWrap {
+    box-sizing: border-box;
+    height: 95%;
+}
+
+.item_rowOne{
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    height: 50%;
+
+    border: 2px solid;
+}
+
+.itemOne {
+    /* display: inline-block; */
+    position: absolute;
+    width: 40%;
+    height: 80%;
+
+    top: 10%;
+    
+    background-color: aquamarine;
+}
+
+/* .itemOne::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color:#0008;
+    box-sizing: border-box;
+    border: 1px solid;
+} */
+
+.itemOne.first {
+    left: 5%;
+}
+
+.itemOne.second {
+    right: 5%;
+}
+
+.itemOne_detail {
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: 30%;
+
+    bottom: 0;
+}
+
+.itemOne_detail>a {
+    display: inline-block;
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+
+========*/
+
+.pageNumUl {
+    text-align: center;
+    height: 5%;
+
+    background-color: darkgoldenrod;
+}
+
+.pageNumUl>li {
+    display: inline-block;
+    line-height: calc(150vh * 0.05);
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+/* 
+===================================================== main_item^
+*/
+
+aside>div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 2vw;
+    height: 100vh;
+    border: 2px solid black;
+
+    z-index: 2;
+}
+
+aside>div:hover {
+    display: none;
+    z-index: 0;
+}
+
+aside>div:hover+nav {
+    display: inline-block;
+}
+
+aside>nav:hover {
+    z-index: 5;
+}
+
+aside>nav {
+    display: none;
+    border: 2px solid black;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: antiquewhite;
+
+    width: 30vw;
+    height: 100vh;
+
+    z-index: 1;
+}
+
+aside>nav:hover {
+    display: inline-block;
+}
+
+aside>nav>ul {
+    margin-top: 10vh;
+}
+
+/* 
+===================================================== main_aside^
+*/
+
+footer {
+    width: 100vw;
+    position: relative;
+    bottom: 0;
+    z-index: 3;
+}
+
+footer>nav {
+    height: 35vh;
+    background-color: #333;
+}
+
+footer>div {
+    height: 20vh;
+    background-color: #444;
+}
+
+/* 
+===================================================== footer^
+*/

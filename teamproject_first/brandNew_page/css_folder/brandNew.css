@@ -1,0 +1,970 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+.headerBigNav {
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+
+    width: 100%;
+    height: 150px;
+    padding: 0 5%;
+
+    z-index: 2;
+}
+
+.headerBigNav:hover {
+    background-color: white;
+}
+
+.headerBigNav:hover .mainBtnLi>a {
+    color: black;
+}
+
+.menuWrap.left {
+    display: flex;
+    flex: 2;
+}
+
+.logo {
+    flex: 1;
+}
+
+.menuWrap.right {
+    display: flex;
+    justify-content: flex-end;
+    flex: 2;
+}
+
+header h1 {
+    height: 100%;
+    background: url(../../image_folder/logo_new3.png) center / 100% no-repeat;
+
+    min-width: 250px;
+}
+
+/* === */
+
+.mainBtnLi {
+    display: flex;
+    height: 100%;
+
+    align-items: center;
+}
+
+.mainBtnLi>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.2rem;
+    color: white;
+}
+
+.mainBtnLi>a:hover {
+    opacity: .5;
+}
+
+.iconBtn {
+    width: 50px;
+    height: 50px;
+}
+
+.non_iconBtn {
+    width: 130px;
+    height: 50px;
+
+    min-width: 80px;
+}
+
+.leftMainUl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+}
+
+.leftMainLi:nth-of-type(n+3) {
+    margin-left: 20px;
+}
+
+.leftMainLi:first-of-type {
+    margin-right: 10px;
+}
+
+.rightMainUl {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+}
+
+.rightMainLi:first-of-type {
+    margin-right: 30px;
+}
+
+.rightMainLi:nth-of-type(n+3) {
+    margin-left: 20px;
+}
+
+/* 
+=========
+*/
+
+.leftMainUl>li>ul {
+    display: grid;
+    visibility: hidden;
+    position: absolute;
+
+    grid-template: .3fr 1fr .3fr 1fr .3fr 1fr .3fr 1fr .3fr 1fr .3fr/ 1fr .3fr 3fr .3fr;
+
+    left: -100%;
+    top: 150px;
+    width: 800px;
+    height: calc(100vh - 150px);
+
+    border: 1px solid;
+    background-color: white;
+}
+
+.leftMainUl>li:nth-child(3) {
+    cursor:default;
+}
+
+.leftMainUl>li:nth-child(3):hover>ul {
+    cursor:default;
+    visibility: initial;
+    left: 0;
+
+    transition: .5s;
+    /* -webkit-transition: left .5s;
+    -moz-transition: left .5s;     
+    -ms-transition: left .5s;
+    -o-transition: left .5s; */
+}
+
+.hoverLi {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hoverLi a {
+    color: black;
+}
+
+.hoverLi.num1 {
+    grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.hoverLi.num1 a:hover,
+.hoverLi.num2 a:hover,
+.hoverLi.num3 a:hover,
+.hoverLi.num4 a:hover,
+.hoverLi.num5 a:hover{
+    background-color: gray;
+}
+
+.hoverLi.num1~li:last-of-type>div {
+    background: url(https://cdn.pixabay.com/photo/2014/12/08/14/23/pocket-watch-560937_1280.jpg) center / cover no-repeat;
+
+    /* default */
+}
+
+.hoverLi.num1:hover~li:last-of-type>div {
+    background: url(https://cdn.pixabay.com/photo/2014/12/08/14/23/pocket-watch-560937_1280.jpg) center / cover no-repeat;
+}
+
+/* ===== */
+
+.hoverLi.num2 {
+    grid-area: 4 / 1 / span 1 / span 1;
+}
+
+.hoverLi.num2:hover~li:last-of-type>div {
+    background:url(https://cdn.pixabay.com/photo/2016/06/12/20/27/macro-1452987_1280.jpg) center/ cover no-repeat;
+}
+
+/* ===== */
+
+.hoverLi.num3 {
+    grid-area: 6 / 1 / span 1 / span 1;
+}
+
+.hoverLi.num3:hover~li:last-of-type>div {
+    background: url(https://cdn.pixabay.com/photo/2018/05/09/16/13/texture-3385535_1280.jpg) center / cover no-repeat;
+}
+
+/* ===== */
+
+.hoverLi.num4 {
+    grid-area: 8 / 1 / span 1 / span 1;
+}
+
+
+.hoverLi.num4:hover~li:last-of-type>div {
+    background: url(https://cdn.pixabay.com/photo/2018/06/10/12/51/olive-wood-3466396_1280.jpg) center / cover no-repeat;
+}
+
+/* ===== */
+
+.hoverLi.num5 {
+    grid-area: 10 / 1 / span 1 / span 1;
+}
+
+.hoverLi.num5:hover~li:last-of-type>div {
+    background: url(https://cdn.pixabay.com/photo/2016/06/24/09/14/glass-1476909_1280.jpg) center / cover no-repeat;
+
+    background-position: -300px;
+}
+
+/* ===== */
+
+.hoverLi.num6 {
+    grid-area: 2 / 3 / -2 / span 1;
+}
+
+.hover_a, .hover_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid;
+}
+
+.hover_a, .hover_div {
+    width: 100%;
+    height: 100%;
+}
+
+.hover_a.hoverMenu {
+    width: 80%;
+}
+
+/* ==============main=============== */
+/* flexBox */
+
+main{
+    background: url(https://cdn.pixabay.com/photo/2016/11/22/23/19/constellations-1851128_960_720.jpg) center/ 100% 100% ;
+}
+#main_banner {
+    width: 100%;
+    height: 150px;
+}
+
+/* ========= */
+/* grid */
+
+#gridContainer {
+    /* background-color: beige;     */
+    width: 70%;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-rows: 3fr .2fr 3fr .5fr 3fr;
+}
+
+.gridContainer_top {
+    width: 100%;
+    height: 100%;
+    color: white;
+
+    display: grid;
+    grid-template: repeat(6, 1fr) / .5fr 2fr 2fr .5fr;
+}
+
+.gridContainer_middle {
+    background: url(../image_folder/brandnew_main2.gif) center / 100%;
+    width: 100%;
+    height: 75vh;
+
+    grid-row: 3 / span 1;
+
+    display: grid;
+    grid-template: .5fr 4fr 4fr .5fr / .5fr 4fr repeat(2, .5fr) 4fr .5fr;
+}
+
+
+.gridContainer_bottom {
+    width: 100%;
+    height: 75vh;
+
+    grid-row: -2 / span 1;
+}
+
+/* ===== */
+/* grid top */
+
+.bannerImg {
+    grid-area: 1 / 1 / -1 / -1;
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009710.00/importer/standup.png.transform.approductmain.png) no-repeat right/50% 100%;
+}
+
+.bannerTitle {
+    grid-area: 2 / 2 / span 1 / span 1;
+    z-index: 1;
+
+    font-size: 2.5em;
+}
+
+.bannerContent {
+    grid-area: 3 / 2 / span 2 / span 1;
+    z-index: 1;
+
+    font-size: 1.5em;
+}
+
+.bannerBtn {
+    margin-top: 5%;
+    grid-area: 5 / 2 / span 1 / span 1;
+}
+.bannerBtn a{
+    text-transform: uppercase;
+    color: black;
+    background-color: antiquewhite;
+
+    text-align: center;
+    display: inline-block;
+
+    width: 100px;
+    line-height: 50px;
+}
+
+/* @media screen and {
+    
+} */
+
+/* ===== */
+/* grid middle */
+
+/* .newItemImg {
+    width: 100%;
+    height: 100%;
+
+    background: url(../image_folder/brandnew_main2.gif) no-repeat center / 100%;
+
+    grid-area: 1 / 1 / -1 / -1;
+} */
+
+.text{
+    grid-area: 2/2/-2/3;
+    color: white;
+
+    text-align: justify;
+    word-break: break-all;
+
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+
+.newItem{
+    position: relative;
+
+    grid-area: 2 / 5 / span 2 / -2;
+}
+
+.section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.section input {
+    display: none;
+}
+.section .slidewrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.section .slidelist {
+    white-space: nowrap;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section .slidelist > li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+}
+
+.section .slidelist > li > a {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.section .slidelist>li>a div {
+    width: 100%;
+    height: 100%;
+}
+
+.section .slidelist label {
+    position: absolute;
+    z-index: 10;
+    top:50%;
+    transform: translateY(-50%);
+    
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.section .slidelist .left {
+    left: 0;
+    background: url(../../image_folder/left.png) center / cover;
+}
+
+.section .slidelist .right {
+    right: 0;
+    background: url(../../image_folder/right.png) center / cover;
+}
+
+
+
+#slide01:checked ~ .slidewrap li { 
+    transform: translateX(0%);
+}
+
+#slide02:checked ~ .slidewrap li { 
+    transform: translateX(-100%);
+}
+#slide03:checked ~ .slidewrap li { 
+    transform: translateX(-200%);
+}
+.slide_img1{
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009185.00/importer/standup.png.transform.approductmain.png) center/ 80% 80% no-repeat;
+}
+.slide_img2{
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009689AB/importer/standup.png.transform.approductmain.png) center/ 80% 80% no-repeat;
+}
+.slide_img3{
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR010406AA/importer/standup.png.transform.approductmain.png) center/ 80% 80% no-repeat;
+}
+
+/* ================================================== */
+/* grid_container_bottom */
+
+
+.gridContainer_bottom {
+    color: white;
+    width: 100%;
+    height: 75vh;
+
+    display: grid;
+
+    grid-row: -2 / span 1;
+
+    grid-template-rows: .5fr 2.5fr;
+
+}
+
+/* ========위에 지울거. */
+
+
+.gridContainer_bottom>.grid_bot_top {
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+
+    text-transform: capitalize;
+    font-size: 2em;
+}
+
+.gridContainer_bottom>.grid_bot_bot {
+    grid-row: 2 / 3;    
+}
+/* ================================ */
+
+
+.bot_section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.bot_section input {
+    display: none;
+}
+.bot_section .bot_slidewrap {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.bot_section .bot_slidelist {
+    white-space: nowrap;
+    font-size: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bot_section .bot_slidelist > li {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+}
+
+.bot_section .bot_slidelist > li > a {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.bot_section .bot_slidelist>li>a div {
+    width: 100%;
+    height: 100%;
+}
+
+.bot_section .bot_slidelist label {
+    position: absolute;
+    z-index: 10;
+    top:50%;
+    transform: translateY(-50%);
+    /* padding: 50px; */
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+.bot_left {
+    left: 0;
+    position: absolute;
+    background: url(../../image_folder/left.png) center / cover;
+}
+
+.bot_right {
+    right: 0;
+    position: absolute;
+    background: url(../../image_folder/right.png) center / cover;
+}
+
+
+
+.bot_main_slide01,
+.bot_main_slide02,
+.bot_main_slide03 {
+    display: flex;
+    position: relative;
+}
+
+
+
+.bot_slide_img11 {
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009784.00/importer/standup.png.transform.approductmain.png) center / 80% 80% no-repeat;
+}
+
+.bot_slide_img12 {
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009861.00/importer/standup.png.transform.approductmain.png) center/ 80% 80% no-repeat ;
+}
+
+.bot_slide_img13 {
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009863.00/importer/standup.png.transform.approductmain.png) center/ 80% 80% no-repeat;
+}
+
+.bot_slide_img21 {
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009557.00/importer/standup.png.transform.approductmain.png) center/ 80% 80% no-repeat;
+}
+
+.bot_slide_img22 {
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009467.00/importer/standup.png.transform.approductmain.png) center / 80% 80% no-repeat;
+}
+
+.bot_slide_img23 {
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009952.00/importer/standup.png.transform.approductmain.png) center/ 80% 80% no-repeat ;
+}
+
+
+
+.bot_slide_img31 {
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009695.00/importer/standup.png.transform.approductmain.png) center/ 80% 80% no-repeat ;
+}
+
+.bot_slide_img32 {
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR010229AA/importer/standup.png.transform.approductmain.png) center/ 80% 80% no-repeat;
+}
+
+.bot_slide_img33 {
+    background: url(https://www.audemarspiguet.com/content/dam/ap/com/products/watches/MTR009504.00/importer/standup.png.transform.approductmain.png) center / 80% 80% no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#bot_slide01:checked ~ .bot_slidewrap li { 
+    transform: translateX(0%);
+}
+
+#bot_slide02:checked ~ .bot_slidewrap li { 
+    transform: translateX(-100%);
+}
+#bot_slide03:checked ~ .bot_slidewrap li { 
+    transform: translateX(-200%);
+}
+
+
+
+
+
+/* ============ */
+/* 수정 전  main container*/
+
+
+main .banner {
+    background-color: #444;
+}
+
+.main_intro {
+    grid-row: 2 / 3;
+}
+
+.main_newItems {
+    grid-row: 4 / 5;
+}
+
+.main_oldItems {
+    grid-row: -3 / -2;
+}
+
+
+
+@media screen and (min-width:400px) {
+    footer {
+        width: 100%;
+        height: auto;
+    
+        display: flex;
+        justify-content: center;
+
+        background-color: #444;
+        color: white;
+    }
+
+    footer>.container {
+        width: 70%;
+        height: auto;
+        display: grid;
+        grid-template-rows: .5fr 2fr 1fr 3fr .5fr 2fr .5fr 3fr .5fr 2fr .5fr 3fr .5fr 1fr .5fr 1.5fr ;
+    }
+
+    .footer_center {
+        text-align: center;
+        align-self: center;
+    }
+
+    .footer_font_size {
+        font-size: 1.5em;
+    }
+
+    .footer_icon {
+        grid-row: 14/15;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        padding: 0 30px;
+    }
+
+    .footer_icon span a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_icon span {
+        width: 40px;
+        height: 40px;
+
+        background-color: white;
+    
+        border: 1px solid;
+        border-radius: 50%;
+    }
+
+    .footer_icon>span i {
+        color: black;
+    }
+
+    .footer_icon>span:nth-child(1):hover {
+        /* position: absolute; */
+        width: 100%;
+        border-radius: 30px;
+        transition: width 2s;
+    }
+
+    .footer_icon>span:nth-child(2):hover {
+        /* position: absolute; */
+        width: 100%;
+        border-radius: 30px;
+        transition: width 2s ;
+    }
+    .footer_icon>span:nth-child(3):hover {
+        /* position: absolute; */
+        width: 100%;
+        border-radius: 30px;
+        transition: width 2s ;
+    }
+    .footer_icon>span:nth-child(4):hover {
+        /* position: absolute; */
+        width: 100%;
+        border-radius: 30px;
+        transition: width 2s ;
+    }
+    
+    .footer_left_name {
+        grid-row: 2/3;
+    }
+
+    .footer_left_contents {
+        grid-row: 4/5;
+    }
+
+    .footer_middle_name {
+        grid-row: 6/7;
+    }
+
+    .footer_middle_contents {
+        grid-row: 8/9;
+
+        display: grid;
+        grid-template: repeat(3,1fr) / .3fr .7fr;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    
+        text-align: center;
+    }
+
+    .footer_right_align {
+        justify-self: end;
+        padding-right: 20px;
+    }
+
+    .footer_middle_contents>p>i {
+        justify-items: right;
+    }
+
+    .footer_right_name {
+    
+        grid-row: 10/11;
+    }
+
+    .footer_right_leftalign {
+        justify-self: start;
+    }
+
+    .footer_right_contents {
+    
+        grid-row: 12/13;
+
+        display: grid;
+        grid-template: repeat(3,1fr) / repeat(2,1fr);
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .footer_last_contents {
+    
+        grid-row: -1/-2;
+    
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    footer {
+        width: 100%;
+        height: 40vh;
+    
+        display: flex;
+        justify-content: center;
+
+        background-color: #444;
+        color: white;
+    }
+
+    footer>.container {
+        width: 70%;
+
+        display: grid;
+        grid-template: .5fr 2fr 5fr 1fr 1.5fr / 3fr .5fr 3fr .5fr 3fr;
+
+    }
+    
+    .footer_center {
+        text-align: center;
+        align-self: center;
+    }
+    
+    .footer_font_size {
+        font-size: 1.5em;
+    }
+
+    .footer_icon {
+        grid-area: 4 / 1 / 5 / span 1;
+    
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        padding: 0 30px;
+        position: relative;
+    }
+
+    .footer_icon span a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_icon span {
+        width: 40px;
+        height: 40px;
+
+        background-color: white;
+    
+        border: 1px solid;
+        /* border-radius: 30%; */
+        
+    }
+
+    .footer_icon>span i {
+        color: black;
+    } 
+    
+    .footer_icon>span:nth-child(1):hover {
+        /* position: absolute; */
+        width: 100%;
+        border-radius: 30px;
+        transition: width 2s;
+    }
+
+    .footer_icon>span:nth-child(2):hover {
+        /* position: absolute; */
+        width: 100%;
+        border-radius: 30px;
+        transition: width 2s ;
+    }
+    .footer_icon>span:nth-child(3):hover {
+        /* position: absolute; */
+        width: 100%;
+        border-radius: 30px;
+        transition: width 2s ;
+    }
+    .footer_icon>span:nth-child(4):hover {
+        /* position: absolute; */
+        width: 100%;
+        border-radius: 30px;
+        transition: width 2s ;
+    }
+
+    .footer_left_name {
+        grid-area: 2 / 1 / 3 / span 1;
+    }
+
+    .footer_left_contents {
+        grid-area: 3 / 1 / 4 / span 1;
+    }
+
+    .footer_middle_name {
+        grid-area : 2 / 3 / span 1 / 4;
+    }
+
+    .footer_middle_contents {
+        grid-area : 3 / 3 / span 1 / 4;
+
+        display: grid;
+        grid-template: repeat(3,1fr) / .3fr .7fr;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    
+        text-align: center;
+    }
+
+    .footer_right_align {
+        justify-self: end;
+        padding-right: 20px;
+    }
+
+    .footer_middle_contents>p>i {
+        justify-items: right;
+    }
+
+    .footer_right_name {
+        grid-area : 2 / -1 / span 1 / -2 ;
+    }
+
+    .footer_right_leftalign {
+        justify-self: start;
+    }
+
+    .footer_right_contents {
+        grid-area: 3 / -1 / span 1 / -2;
+
+        display: grid;
+        grid-template: repeat(3,1fr) / repeat(2,1fr);
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+.footer_last_contents {
+        grid-area: -1 / 1 / -2 / span 5;
+    
+        font-size: 1.5em;
+    }
+}
+/* ============================== */
+
+@media screen and (max-width:1350px) {
+    main>section {
+        grid-template: 150px 200px 100px 1fr 100px/ 1.5fr 7fr 1.5fr;
+    }
+
+    .headerMainUl .mainBtnLi.non_iconLi {
+        display: none;
+    }
+}

@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.credit_img {
+    background: url(../image_folder/credit_card_img.png) center/100% no-repeat ;
+    height: 100vh;
+}
